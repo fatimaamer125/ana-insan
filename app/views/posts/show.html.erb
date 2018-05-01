@@ -1,0 +1,48 @@
+<br><br><br><br><br><br>
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <label>الاسم:</label>
+  <%= @post.name %>
+</p>
+
+<p>
+   <label>االمحافظة:</label>
+  <%= @post.city %>
+</p>
+
+<p>
+  <label>اقرب نقطة دالة :</label>
+  <%= @post.location %>
+</p>
+
+<p>
+ <label>تاريخ الحالة :</label>
+  <%= @post.date %>
+</p>
+
+<p>
+ <label>رقم الهاتف:</label>
+  <%= @post.number %>
+</p>
+<p>
+  <%= image_tag @post.image.url(:medium) %>
+</p>
+<p>
+<label>الحالة </label>
+  <%= @post.condition %>
+</p>
+
+<p>
+ <label>وصف عن الحالة :</label>
+  <%= @post.description %>
+</p>
+<div class="container">
+<!--% if post.editable_by(current_user) %>
+  <%= link_to 'تعديل الحالة', edit_post_path(@post), class:"btn default"%>
+<!--% end %-->
+<%= link_to 'الرجوع', posts_path, class:"btn default" %>
+</div>
+</div>
+<br><br><br><br><br><br>

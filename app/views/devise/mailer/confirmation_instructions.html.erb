@@ -1,0 +1,8 @@
+<br><br><br><br><br><br>
+<div class="container">
+<p>أهلا بك <%= @email %>!</p>
+
+<p>يمكنك تأكيد البريد الإلكتروني لحسابك من خلال الرابط أدناه:</p>
+
+<p><%= link_to 'تأكيد حسابي', confirmation_url(@resource, confirmation_token: @token) %></p>
+</div>

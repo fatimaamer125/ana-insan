@@ -1,0 +1,20 @@
+<div class="container">
+<br><br>
+<div class="md-form">
+<div class="row">
+<div class="col-md-10">
+<%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
+<div class="form-inputs">
+<%= f.input :name, label: "الاسم الثلاثي" , required:true %><br>
+<%= f.input :city, label: "المحافظة" , collection: ["بغداد","اربيل","دهوك","بصرة","النجف","كربلاء","سليمانية","كركوك","الانبار","الموصل","حلبجة","ذي قار","ميسان","المثنى","واسط","القادسية","ديالى","بابل"], required:true %><br>
+<%= f.input :location, label: "اقرب نقطة دالة", required:true %><br>
+<%= f.input :number, label: "رقم الهاتف", required:true %><br>
+<%= f.input :date, label: "تاريخ الحالة" , required:true %><br>
+<%= f.input :condition, label: "اختر حالة", collection: ["نازح", "محتاج", "كوارث", "مساعدات","متطوع"], required:true %><br>
+<%= f.input :image, label: "صورة عن الحالة", required:true %><br>
+<%= f.input :description, label: "وصف الحالة", as: :text, :input_html => {:rows => 5}  , required:true %><br>
+<!--%= f.input :done, label: 'تم الامر', as: :boolean, checked_value: true, unchecked_value: false%-->
+<%= f.button :submit, "تأكيد", class:"btn defaul" %><br>
+  </div>
+<% end %>
+</div></div></div></div>

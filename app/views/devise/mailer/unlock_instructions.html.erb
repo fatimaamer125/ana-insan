@@ -1,0 +1,10 @@
+<br><br><br><br><br><br>
+<div class="container">
+<p>مرحبا <%= @resource.email %>!</p>
+
+<p>تم قفل حسابك بسبب عدد زائد من محاولات تسجيل الدخول غير الناجحة.</p>
+
+<p>انقر فوق الرابط أدناه لفتح حسابك:</p>
+
+<p><%= link_to 'افتح حسابي', unlock_url(@resource, unlock_token: @token) %></p>
+</div>

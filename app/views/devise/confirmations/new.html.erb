@@ -1,0 +1,24 @@
+<br><br><br><br><br><br>
+<div class="container">
+<div class="md-form">
+<div class="row">
+<div class ="col-md-2"></div>
+<div class="col-md-8">
+<h2>إعادة إرسال تعليمات التأكيد</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+  <%= f.full_error :confirmation_token %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "إعادة إرسال تعليمات التأكيد" %>
+  </div>
+<% end %>
+<br>
+<%= render "devise/shared/links" %>
+</div></div></div></div></div>
+<br>

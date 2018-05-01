@@ -1,0 +1,21 @@
+<br><br><br><br><br><br>
+<div class="container">
+<div class="md-form">
+<div class="container">
+<div class="row">
+<div class ="col-md-2"></div>
+<div class="col-md-8">
+<h2 id="h1">تسجيل الدخول</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <%= f.input :email, label:'البريد الالكتروني', required: false, autofocus: true %>
+    <%= f.input :password,label:'كلمة السر', required: false %>
+    <%= f.input :remember_me, label:'ذكرني', as: :boolean if devise_mapping.rememberable? %><br>
+    <%= f.button :submit, "تسجيل الدخول" %>
+
+<% end %>
+<br>
+<%= render "devise/shared/links" %>
+</div></div></div></div></div>
+<br>
