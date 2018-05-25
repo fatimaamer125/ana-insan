@@ -8,6 +8,7 @@ gem 'devise'
 gem 'rails_admin', '~> 1.3'
 gem "paperclip", "~> 6.0.0"
 gem 'jquery-rails'
+gem 'nokogiri'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
